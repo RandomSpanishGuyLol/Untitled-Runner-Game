@@ -1,5 +1,5 @@
 randomize();
-var chunk = global.chunks.normal[irandom(array_length(global.chunks)-1)];
+var chunk = global.chunks.normal[irandom(array_length(global.chunks.normal)-1)];
 
 if (array_length(ROOM_GEN_HISTORY) % 50 == 0) {
 	chunk = global.chunks.special[0]
