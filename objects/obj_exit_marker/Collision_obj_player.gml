@@ -1,0 +1,1 @@
+obj_room_manager.player_room_index = set_room_index
