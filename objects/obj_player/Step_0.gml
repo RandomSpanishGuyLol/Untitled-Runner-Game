@@ -1,4 +1,4 @@
-sp// Horizontal movement
+// Horizontal movement
 PlayerMovement();
 
 // Gravity + vertical collision
