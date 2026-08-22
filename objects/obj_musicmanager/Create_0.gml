@@ -1,0 +1,1 @@
+audio_play_sound(mus_where_6, 1, false)

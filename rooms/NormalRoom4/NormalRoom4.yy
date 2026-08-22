@@ -52,6 +52,7 @@
     {"name":"inst_44B1C914","path":"rooms/NormalRoom4/NormalRoom4.yy",},
     {"name":"inst_66418898","path":"rooms/NormalRoom4/NormalRoom4.yy",},
     {"name":"inst_2BCBF4DE","path":"rooms/NormalRoom4/NormalRoom4.yy",},
+    {"name":"inst_52EBD126","path":"rooms/NormalRoom4/NormalRoom4.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -102,6 +103,7 @@
         {"$GMRInstance":"v4","%Name":"inst_44B1C914","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44B1C914","objectId":{"name":"obj_slope1","path":"objects/obj_slope1/obj_slope1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1100.0,"y":800.0,},
         {"$GMRInstance":"v4","%Name":"inst_66418898","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_66418898","objectId":{"name":"obj_slope1","path":"objects/obj_slope1/obj_slope1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":180.19368,"scaleX":1.0,"scaleY":1.0,"x":200.0,"y":200.0,},
         {"$GMRInstance":"v4","%Name":"inst_2BCBF4DE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2BCBF4DE","objectId":{"name":"obj_slope2","path":"objects/obj_slope2/obj_slope2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":179.65222,"scaleX":1.0,"scaleY":1.0,"x":1300.0,"y":200.0,},
+        {"$GMRInstance":"v4","%Name":"inst_52EBD126","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_52EBD126","objectId":{"name":"obj_entrance_marker","path":"objects/obj_entrance_marker/obj_entrance_marker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":0.0,"y":400.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

@@ -1,8 +1,8 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_saferoomdoor",
-  "bboxMode":0,
-  "bbox_bottom":299,
+  "bboxMode":2,
+  "bbox_bottom":298,
   "bbox_left":50,
   "bbox_right":99,
   "bbox_top":0,

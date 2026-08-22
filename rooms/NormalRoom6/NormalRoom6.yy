@@ -148,6 +148,7 @@
     {"name":"inst_39109F4F","path":"rooms/NormalRoom6/NormalRoom6.yy",},
     {"name":"inst_7F4B11CF","path":"rooms/NormalRoom6/NormalRoom6.yy",},
     {"name":"inst_4208DB19","path":"rooms/NormalRoom6/NormalRoom6.yy",},
+    {"name":"inst_39D5A9C7","path":"rooms/NormalRoom6/NormalRoom6.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -294,6 +295,7 @@
         {"$GMRInstance":"v4","%Name":"inst_39109F4F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_39109F4F","objectId":{"name":"obj_slope1","path":"objects/obj_slope1/obj_slope1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":180.19368,"scaleX":1.0,"scaleY":1.0,"x":200.0,"y":600.0,},
         {"$GMRInstance":"v4","%Name":"inst_7F4B11CF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7F4B11CF","objectId":{"name":"obj_block2","path":"objects/obj_block2/obj_block2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2000.0,"y":200.0,},
         {"$GMRInstance":"v4","%Name":"inst_4208DB19","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4208DB19","objectId":{"name":"obj_block2","path":"objects/obj_block2/obj_block2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1900.0,"y":200.0,},
+        {"$GMRInstance":"v4","%Name":"inst_39D5A9C7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_39D5A9C7","objectId":{"name":"obj_entrance_marker","path":"objects/obj_entrance_marker/obj_entrance_marker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":0.0,"y":100.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

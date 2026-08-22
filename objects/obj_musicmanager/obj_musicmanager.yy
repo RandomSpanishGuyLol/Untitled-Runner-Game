@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_saferoomdoor",
+  "%Name":"obj_musicmanager",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_saferoomdoor",
+  "name":"obj_musicmanager",
   "overriddenProperties":[],
   "parent":{
     "name":"Unnamed runner game",
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_saferoomdoor",
-    "path":"sprites/spr_saferoomdoor/spr_saferoomdoor.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

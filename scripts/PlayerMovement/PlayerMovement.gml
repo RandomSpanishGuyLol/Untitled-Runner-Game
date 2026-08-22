@@ -1,3 +1,16 @@
+function CollisionCheck(cx, cy) {
+	if (place_meeting(cx, cy, obj_block2)) {
+		return true
+	}
+	if (place_meeting(cx, cy, obj_slope1) or place_meeting(cx, cy, obj_slope2) or place_meeting(cx, cy, obj_slope3) or place_meeting(cx, cy, obj_slope4)) {
+		return true
+	}
+	if (place_meeting(cx, cy, obj_saferoomdoor)) {
+		return true
+	}
+	return false
+}
+
 function PlayerMovement()
 {
     var moving = false;
@@ -10,7 +23,7 @@ function PlayerMovement()
         // move step by step to avoid clipping through walls
         for (var i = 0; i < abs(step_x); i++)
         {
-            if (!place_meeting(x + sign(step_x), y, obj_block2))
+            if (!CollisionCheck(x + sign(step_x), y))
             {
                 x += sign(step_x);
             }
@@ -26,7 +39,7 @@ function PlayerMovement()
         step_x = move_speed;
         for (var i = 0; i < abs(step_x); i++)
         {
-            if (!place_meeting(x + sign(step_x), y, obj_block2))
+            if (!CollisionCheck(x + sign(step_x), y))
             {
                 x += sign(step_x);
             }

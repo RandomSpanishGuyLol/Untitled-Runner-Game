@@ -1,7 +1,7 @@
 randomize();
 var chunk = global.chunks.normal[irandom(array_length(global.chunks.normal)-1)];
 
-if (array_length(ROOM_GEN_HISTORY) % 50 == 0) {
+if (array_length(ROOM_GEN_HISTORY) % 50 == 0 or array_length(ROOM_GEN_HISTORY) == 5) {
 	chunk = global.chunks.special[0]
 }
 
@@ -44,6 +44,7 @@ for (var r = 0; r < array_length(shape); r++) {
 			case "⬕": obj = obj_slope2; break;
 			case "◤": obj = obj_slope3; break;
 			case "◥": obj = obj_slope4; break;
+			case "S": obj = obj_saferoomdoor; break;
 			case "⚿": 
 				var new_inst = instance_create_layer(xx, yy, "Instances", obj_door_trigger);
 				new_index = array_length(ROOM_GEN_HISTORY)
