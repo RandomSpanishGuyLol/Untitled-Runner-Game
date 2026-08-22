@@ -24,8 +24,8 @@ for (var r = 0; r < array_length(shape) - 4; r++) {
 }
 
 last_room = ROOM_GEN_HISTORY[array_length(ROOM_GEN_HISTORY)-1]
-last_room_end_x = last_room[1] + last_room[2]
-last_room_exit_y = last_room[3]
+last_room_end_x = last_room.end_x + last_room.width
+last_room_exit_y = last_room.exit_y
 
 var chunk_blocks = []
 
@@ -72,7 +72,7 @@ for (var r = 0; r < array_length(shape); r++) {
 
 generated_room_width = string_length(shape[0]) * 100
 
-room_data = [chunk_blocks, last_room_end_x, generated_room_width, new_exit_y]
+room_data = {chunk_blocks: chunk_blocks, end_x: last_room_end_x, width: generated_room_width, exit_y: new_exit_y}
 
 array_push(ROOM_GEN_HISTORY, room_data)
 
