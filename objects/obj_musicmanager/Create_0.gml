@@ -1,1 +1,1 @@
-audio_play_sound(mus_where_6, 1, false)
+audio_play_sound(mus_hamster_DumSpiroSpero, 1, false, 0.6, 0, 0.8)

@@ -73,7 +73,7 @@ for (var r = 0; r < array_length(shape); r++) {
 
 generated_room_width = string_length(shape[0]) * 100
 
-room_data = {chunk_blocks: chunk_blocks, end_x: last_room_end_x, width: generated_room_width, exit_y: new_exit_y}
+room_data = {id: array_length(ROOM_GEN_HISTORY), name: chunk.name, chunk_blocks: chunk_blocks, end_x: last_room_end_x, width: generated_room_width, exit_y: new_exit_y}
 
 array_push(ROOM_GEN_HISTORY, room_data)
 

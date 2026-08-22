@@ -37,6 +37,7 @@
   },
   "name":"Unnamed runner game",
   "resources":[
+    {"id":{"name":"fnt_TimerFont","path":"fonts/fnt_TimerFont/fnt_TimerFont.yy",},},
     {"id":{"name":"obj_block1","path":"objects/obj_block1/obj_block1.yy",},},
     {"id":{"name":"obj_block2","path":"objects/obj_block2/obj_block2.yy",},},
     {"id":{"name":"obj_camera_manager","path":"objects/obj_camera_manager/obj_camera_manager.yy",},},
@@ -52,6 +53,7 @@
     {"id":{"name":"obj_slope3","path":"objects/obj_slope3/obj_slope3.yy",},},
     {"id":{"name":"obj_slope4","path":"objects/obj_slope4/obj_slope4.yy",},},
     {"id":{"name":"obj_spike","path":"objects/obj_spike/obj_spike.yy",},},
+    {"id":{"name":"obj_timemanager","path":"objects/obj_timemanager/obj_timemanager.yy",},},
     {"id":{"name":"obj_warningsign","path":"objects/obj_warningsign/obj_warningsign.yy",},},
     {"id":{"name":"obj_water","path":"objects/obj_water/obj_water.yy",},},
     {"id":{"name":"TheLurkerObj","path":"objects/TheLurkerObj/TheLurkerObj.yy",},},
@@ -77,6 +79,7 @@
     {"id":{"name":"seq_Room4","path":"sequences/seq_Room4/seq_Room4.yy",},},
     {"id":{"name":"seq_Room5","path":"sequences/seq_Room5/seq_Room5.yy",},},
     {"id":{"name":"seq_Room6","path":"sequences/seq_Room6/seq_Room6.yy",},},
+    {"id":{"name":"mus_hamster_DumSpiroSpero","path":"sounds/mus_hamster_DumSpiroSpero/mus_hamster_DumSpiroSpero.yy",},},
     {"id":{"name":"mus_where_6","path":"sounds/mus_where_6/mus_where_6.yy",},},
     {"id":{"name":"BlockSpriteTest","path":"sprites/BlockSpriteTest/BlockSpriteTest.yy",},},
     {"id":{"name":"BlockSpriteTest2","path":"sprites/BlockSpriteTest2/BlockSpriteTest2.yy",},},
