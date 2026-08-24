@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"SlopeSpriteTest3",
+    "path":"sprites/SlopeSpriteTest3/SlopeSpriteTest3.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

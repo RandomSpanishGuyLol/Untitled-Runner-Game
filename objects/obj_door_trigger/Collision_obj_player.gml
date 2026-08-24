@@ -9,7 +9,7 @@ if (!instance_exists(obj_entrance_marker)) { // Prevent double-triggering
 		}
 		
 		if (obj_room_manager.ROOM_GEN_HISTORY[set_room_index].name == "SafeRoom") {
-			audio_play_sound(mus_hamster_DumSpiroSpero, 1, false, 0.6, 0, 0.8)
+			audio_play_sound(mus_hamster_DumSpiroSpero, 1, true, 0.6, 0, 0.8)
 			audio_stop_sound(mus_where_6)
 	
 	        obj_timemanager.timer_is_running = false

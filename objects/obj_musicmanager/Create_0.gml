@@ -1,1 +1,1 @@
-audio_play_sound(mus_hamster_DumSpiroSpero, 1, false, 0.6, 0, 0.8)
+audio_play_sound(mus_hamster_DumSpiroSpero, 1, true, 0.6, 0, 0.8)

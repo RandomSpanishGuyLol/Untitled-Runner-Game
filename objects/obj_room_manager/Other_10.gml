@@ -45,6 +45,22 @@ for (var r = 0; r < array_length(shape); r++) {
 			case "◤": obj = obj_slope3; break;
 			case "◥": obj = obj_slope4; break;
 			case "S": obj = obj_saferoomdoor; break;
+			case "X": 
+				randomise()
+				var enemy_i = random(1) * 100
+				show_debug_message(enemy_i)
+				if (enemy_i <= 30) {
+					obj = TheLurkerObj; 
+				}
+				else if (enemy_i <= 60)
+				{
+					obj = TheScorcherObject;
+				}
+				else {
+					obj = -1;
+				}
+				
+				break;
 			case "⚿": 
 				var new_inst = instance_create_layer(xx, yy, "Instances", obj_door_trigger);
 				new_index = array_length(ROOM_GEN_HISTORY)
