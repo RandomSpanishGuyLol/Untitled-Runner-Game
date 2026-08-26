@@ -1,3 +1,5 @@
+exit;
+
 var minutes = floor(remaining_time / 3600)
 var seconds = floor((remaining_time - minutes * 60 * 60) / 60)
 var milliseconds = remaining_time - minutes * 60 * 60 - seconds * 60
