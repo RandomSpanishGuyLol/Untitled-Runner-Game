@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"TheScorcherSprite",
-    "path":"sprites/TheScorcherSprite/TheScorcherSprite.yy",
+    "name":"TheScorcherSpriteAnimated",
+    "path":"sprites/TheScorcherSpriteAnimated/TheScorcherSpriteAnimated.yy",
   },
   "spriteMaskId":null,
   "visible":true,

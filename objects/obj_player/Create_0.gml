@@ -1,6 +1,7 @@
 speed = 0;
-move_speed = 4;
-vsp = 0;        
+moveSpd = 8;
+yspd = 0;   
+xspd = 0;
 grav = 0.75;     
-jump = -25; 
+jspd = -25; 
 is_in_locker = false;

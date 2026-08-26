@@ -1,57 +1,95 @@
-function CollisionCheck(cx, cy) {
-	if (place_meeting(cx, cy, obj_block2)) {
-		return true
+function AllCollisionCheck(cx, cy) {
+	var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4]
+	
+	for (i=0; i<array_length(collidable); i++) {
+		if place_meeting(cx, cy, collidable[i]) {
+			return true
+		}
 	}
-	if (place_meeting(cx, cy, obj_slope1) or place_meeting(cx, cy, obj_slope2) or place_meeting(cx, cy, obj_slope3) or place_meeting(cx, cy, obj_slope4)) {
-		return true
-	}
-	if (place_meeting(cx, cy, obj_saferoomdoor)) {
-		return true
-	}
+	
 	return false
 }
 
+rightKey = keyboard_check(vk_right);
+leftKey = keyboard_check(vk_left);
+jumpKeyPressed = keyboard_check_pressed(vk_space)
+shiftPressed = 1 + keyboard_check(vk_shift) * 1.5;
+
+moveDir = rightKey - leftKey
+
+if moveDir == 1 {
+sprite_index = PlayerRightTest
+}
+else if moveDir == -1 {
+	sprite_index = PlayerLeftTest
+}
+else {
+	sprite_index = PlayerSpriteTest
+}
+
+smoothCof = 0.9
+bounceFac = -0.1
+
+// if abs(xspd) < maxSpeed {
+	// var signed = sign(xspd)
+	xspd = xspd * smoothCof + (moveDir * moveSpd) * shiftPressed * (1-smoothCof)
+//}
+
+var subPixel = .5;
+
+var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4]
+
 if (!is_in_locker) {
-	// Horizontal movement
-	PlayerMovement();
-
-	// Gravity + vertical collision
-	vsp += grav;
-
-	if (place_meeting(x, y + vsp, obj_block2))
-	{
-	    while (!CollisionCheck(x, y  + sign(vsp)))
-	    {
-	        y += sign(vsp);
-	    }
-	    vsp = 0;
-	}
-
-	y += vsp;
-
-	// Jumping
-	if (keyboard_check_pressed(vk_space))
-	{
-	    if (CollisionCheck(x, y + 1))
-	    {
-	        vsp = jump;
-	    }
-	}
-
-	if (keyboard_check(vk_shift)) 
-	{
-	    move_speed = 16;
-	} 
-	else 
-	{
-	    move_speed = 4;
-	}
-	image_speed = move_speed / 16
-
-	// If the player falls off the bottom, jump back to the start (for testing)
-	if (y > 999999999999) { //2000) {
-	    x = 100;
-	    y = 100;
-	    vspeed = 0;
+	for (i=0; i<array_length(collidable); i++) {
+		if place_meeting(x + xspd, y, collidable[i]) {
+			// Check if there is a slope
+			if (!AllCollisionCheck(x + xspd, y - abs(xspd) - 1)) {
+				show_debug_message("la ladera")
+				while (AllCollisionCheck(x + xspd, y)) {
+					show_debug_message("asdasdasd")
+				    y -= subPixel
+				}
+				
+				break
+			}
+			// If there's no slope, regular collision
+			else 
+			{
+				var pixelCheck = subPixel * sign(xspd)
+				while (!AllCollisionCheck(x + pixelCheck, y)) {
+					x += pixelCheck
+				}
+		
+				xspd = 0
+				break
+			}
+		}
 	}
 }
+
+x += xspd
+
+yspd += grav
+
+if jumpKeyPressed && AllCollisionCheck(x, y+16) && !is_in_locker {
+	yspd = jspd
+}
+
+
+if (!is_in_locker) {
+	var subPixel = .5;
+	for (i=0; i<array_length(collidable); i++)
+	{
+		if place_meeting(x, y + yspd, collidable[i]) {
+			var pixelCheck = subPixel * sign(yspd)
+			while (!AllCollisionCheck(x, y+pixelCheck)) {
+				y += pixelCheck
+			}
+		
+			yspd = yspd * bounceFac
+			break
+		}
+	}
+}
+
+y += yspd

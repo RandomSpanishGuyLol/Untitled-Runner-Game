@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
   "%Name":"PlayerRightTest",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":199,
-  "bbox_left":6,
-  "bbox_right":99,
+  "bbox_left":20,
+  "bbox_right":80,
   "bbox_top":53,
   "collisionKind":1,
   "collisionTolerance":0,
