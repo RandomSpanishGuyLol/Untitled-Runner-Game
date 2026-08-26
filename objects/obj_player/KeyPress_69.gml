@@ -2,8 +2,8 @@ if (is_in_locker) {
 	visible = true;
 	is_in_locker = false;
 	
-	vsp -= 10
-	// hspeed += 30
+	yspd -= 30
+	xspd += (keyboard_check(vk_right) - keyboard_check(vk_left)) * 30
 }
 else {
 	var closest_locker = instance_nearest(x, y, obj_locker);

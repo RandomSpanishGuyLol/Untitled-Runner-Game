@@ -1,5 +1,5 @@
 function AllCollisionCheck(cx, cy) {
-	var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4]
+	var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4, obj_saferoomdoor]
 	
 	for (i=0; i<array_length(collidable); i++) {
 		if place_meeting(cx, cy, collidable[i]) {
@@ -37,7 +37,7 @@ bounceFac = -0.1
 
 var subPixel = .5;
 
-var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4]
+var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4, obj_saferoomdoor]
 
 if (!is_in_locker) {
 	for (i=0; i<array_length(collidable); i++) {
@@ -65,16 +65,15 @@ if (!is_in_locker) {
 			}
 		}
 	}
+	
+	x += xspd
 }
-
-x += xspd
 
 yspd += grav
 
 if jumpKeyPressed && AllCollisionCheck(x, y+16) && !is_in_locker {
 	yspd = jspd
 }
-
 
 if (!is_in_locker) {
 	var subPixel = .5;
@@ -90,6 +89,7 @@ if (!is_in_locker) {
 			break
 		}
 	}
+	
+	y += yspd
 }
 
-y += yspd

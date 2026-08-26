@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"TheScorcherSpriteAnimated",
   "bboxMode":0,
-  "bbox_bottom":90,
+  "bbox_bottom":181,
   "bbox_left":0,
-  "bbox_right":99,
+  "bbox_right":199,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -20,7 +20,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":100,
+  "height":200,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"ecd5f0d0-1d27-4a37-a2a9-4ebb4af48389","blendMode":0,"displayName":"default","isLocked":false,"name":"ecd5f0d0-1d27-4a37-a2a9-4ebb4af48389","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -102,5 +102,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":100,
+  "width":200,
 }
