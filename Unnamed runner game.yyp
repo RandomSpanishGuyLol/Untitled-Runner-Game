@@ -33,7 +33,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Unnamed runner game",
   "resources":[
@@ -64,6 +64,10 @@
     {"id":{"name":"AbyssModRoom1","path":"rooms/AbyssModRoom1/AbyssModRoom1.yy",},},
     {"id":{"name":"ImapledModRoom2","path":"rooms/ImapledModRoom2/ImapledModRoom2.yy",},},
     {"id":{"name":"ImpaledModRoom1","path":"rooms/ImpaledModRoom1/ImpaledModRoom1.yy",},},
+    {"id":{"name":"LockerRoom1","path":"rooms/LockerRoom1/LockerRoom1.yy",},},
+    {"id":{"name":"LockerRoom2","path":"rooms/LockerRoom2/LockerRoom2.yy",},},
+    {"id":{"name":"LockerRoom3","path":"rooms/LockerRoom3/LockerRoom3.yy",},},
+    {"id":{"name":"LockerRoom4","path":"rooms/LockerRoom4/LockerRoom4.yy",},},
     {"id":{"name":"MainGameRoom","path":"rooms/MainGameRoom/MainGameRoom.yy",},},
     {"id":{"name":"NormalRoom1","path":"rooms/NormalRoom1/NormalRoom1.yy",},},
     {"id":{"name":"NormalRoom2","path":"rooms/NormalRoom2/NormalRoom2.yy",},},
@@ -125,6 +129,10 @@
     {"roomId":{"name":"ImapledModRoom2","path":"rooms/ImapledModRoom2/ImapledModRoom2.yy",},},
     {"roomId":{"name":"WaterRoom1","path":"rooms/WaterRoom1/WaterRoom1.yy",},},
     {"roomId":{"name":"SafeRoom","path":"rooms/SafeRoom/SafeRoom.yy",},},
+    {"roomId":{"name":"LockerRoom2","path":"rooms/LockerRoom2/LockerRoom2.yy",},},
+    {"roomId":{"name":"LockerRoom1","path":"rooms/LockerRoom1/LockerRoom1.yy",},},
+    {"roomId":{"name":"LockerRoom3","path":"rooms/LockerRoom3/LockerRoom3.yy",},},
+    {"roomId":{"name":"LockerRoom4","path":"rooms/LockerRoom4/LockerRoom4.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
