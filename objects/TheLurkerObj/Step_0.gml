@@ -1,6 +1,23 @@
+if dead {
+	if deadTimer == 20 {
+		sprite_index = TheLurkerAnimated
+		deadTimer -= 1
+	}
+	else if deadTimer == 0 {
+		instance_destroy()
+	}
+	else {
+	deadTimer -= 1
+	}
+	exit
+}
+
 moveDir = 0
 
-if (abs(obj_player.x - x) > 50) {
+if obj_player.is_in_locker {
+	moveDir = 0
+}
+else if (abs(obj_player.x - x) > 50) {
 	moveDir = sign(obj_player.x - x)
 }
 

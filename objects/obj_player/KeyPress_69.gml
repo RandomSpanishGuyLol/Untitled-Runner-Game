@@ -1,4 +1,4 @@
-spif (is_in_locker) {
+if (is_in_locker) {
 	visible = true;
 	is_in_locker = false;
 	

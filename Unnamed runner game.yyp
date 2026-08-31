@@ -33,7 +33,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Unnamed runner game",
   "resources":[
@@ -94,6 +94,7 @@
     {"id":{"name":"BlockSpriteTest2","path":"sprites/BlockSpriteTest2/BlockSpriteTest2.yy",},},
     {"id":{"name":"PlayerLeftTest","path":"sprites/PlayerLeftTest/PlayerLeftTest.yy",},},
     {"id":{"name":"PlayerRightTest","path":"sprites/PlayerRightTest/PlayerRightTest.yy",},},
+    {"id":{"name":"PlayerSpritePunch","path":"sprites/PlayerSpritePunch/PlayerSpritePunch.yy",},},
     {"id":{"name":"PlayerSpriteTest","path":"sprites/PlayerSpriteTest/PlayerSpriteTest.yy",},},
     {"id":{"name":"SlopeSpriteTest1","path":"sprites/SlopeSpriteTest1/SlopeSpriteTest1.yy",},},
     {"id":{"name":"SlopeSpriteTest2","path":"sprites/SlopeSpriteTest2/SlopeSpriteTest2.yy",},},
@@ -114,7 +115,9 @@
     {"id":{"name":"TheLurkerSprite","path":"sprites/TheLurkerSprite/TheLurkerSprite.yy",},},
     {"id":{"name":"TheScorcherFlameSpriteAnimation","path":"sprites/TheScorcherFlameSpriteAnimation/TheScorcherFlameSpriteAnimation.yy",},},
     {"id":{"name":"TheScorcherSprite","path":"sprites/TheScorcherSprite/TheScorcherSprite.yy",},},
-    {"id":{"name":"TheScorcherSpriteAnimated","path":"sprites/TheScorcherSpriteAnimated/TheScorcherSpriteAnimated.yy",},},
+    {"id":{"name":"TheScorcherSpriteDeadLol","path":"sprites/TheScorcherSpriteDeadLol/TheScorcherSpriteDeadLol.yy",},},
+    {"id":{"name":"TheScorcherSpriteLeft","path":"sprites/TheScorcherSpriteLeft/TheScorcherSpriteLeft.yy",},},
+    {"id":{"name":"TheScorcherSpriteRight","path":"sprites/TheScorcherSpriteRight/TheScorcherSpriteRight.yy",},},
     {"id":{"name":"WarningSignTest","path":"sprites/WarningSignTest/WarningSignTest.yy",},},
     {"id":{"name":"WaterSpriteTest","path":"sprites/WaterSpriteTest/WaterSpriteTest.yy",},},
   ],

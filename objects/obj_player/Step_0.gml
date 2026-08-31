@@ -17,6 +17,7 @@ shiftPressed = 1 + keyboard_check(vk_shift) * 1.5;
 
 moveDir = rightKey - leftKey
 
+if high_priority_anim_timer == 0 {
 if moveDir == 1 {
 sprite_index = PlayerRightTest
 }
@@ -25,6 +26,10 @@ else if moveDir == -1 {
 }
 else {
 	sprite_index = PlayerSpriteTest
+}
+}
+else {
+	high_priority_anim_timer -= 1
 }
 
 smoothCof = 0.9

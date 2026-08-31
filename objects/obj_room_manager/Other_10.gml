@@ -49,10 +49,10 @@ for (var r = 0; r < array_length(shape); r++) {
 				randomise()
 				var enemy_i = random(1) * 100
 				show_debug_message(enemy_i)
-				if (enemy_i <= 30) {
+				if (enemy_i <= 50) {
 					obj = TheLurkerObj; 
 				}
-				else if (enemy_i <= 60)
+				else if (enemy_i <= 100)
 				{
 					obj = TheScorcherObject;
 				}
