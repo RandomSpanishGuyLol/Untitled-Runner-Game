@@ -1,6 +1,6 @@
 if dead {
 	if deadTimer == 20 {
-		sprite_index = TheLurkerAnimated
+		sprite_index = TheLurkerSprDead
 		deadTimer -= 1
 	}
 	else if deadTimer == 0 {
@@ -19,6 +19,13 @@ if obj_player.is_in_locker {
 }
 else if (abs(obj_player.x - x) > 50) {
 	moveDir = sign(obj_player.x - x)
+}
+
+if moveDir > 0 {
+	sprite_index = TheLurkerSprRight
+}
+else if moveDir < 0 {
+	sprite_index = TheLurkerSprLeft
 }
 
 function AllCollisionCheck(cx, cy) {

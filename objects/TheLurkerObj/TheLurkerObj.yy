@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"TheLurkerSprite",
-    "path":"sprites/TheLurkerSprite/TheLurkerSprite.yy",
+    "name":"TheLurkerSprRight",
+    "path":"sprites/TheLurkerSprRight/TheLurkerSprRight.yy",
   },
   "spriteMaskId":null,
   "visible":true,

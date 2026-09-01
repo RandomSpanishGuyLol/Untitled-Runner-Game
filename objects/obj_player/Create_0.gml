@@ -6,4 +6,6 @@ grav = 0.75;
 jspd = -25; 
 is_in_locker = false;
 
+last_direction = 1;
+
 high_priority_anim_timer = 0;

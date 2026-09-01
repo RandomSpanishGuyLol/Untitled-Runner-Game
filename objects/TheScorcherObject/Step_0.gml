@@ -12,6 +12,7 @@ if dead {
 	exit
 }
 
+if !gotcha {
 moveDir = 0
 
 if obj_player.is_in_locker {
@@ -97,4 +98,14 @@ y += yspd
 // If the player falls off the bottom, jump back to the start (for testing)
 if (y > 2000) { //2000) {
     instance_destroy()
+}
+
+if point_distance(obj_player.x, obj_player.y, x, y) <= 100 {
+	gotcha = true
+}
+}
+else 
+{
+	x = obj_player.x
+	y = obj_player.y
 }

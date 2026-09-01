@@ -20,9 +20,11 @@ moveDir = rightKey - leftKey
 if high_priority_anim_timer == 0 {
 if moveDir == 1 {
 sprite_index = PlayerRightTest
+last_direction = 1
 }
 else if moveDir == -1 {
 	sprite_index = PlayerLeftTest
+	last_direction = -1
 }
 else {
 	sprite_index = PlayerSpriteTest
