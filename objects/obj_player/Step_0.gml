@@ -51,9 +51,7 @@ if (!is_in_locker) {
 		if place_meeting(x + xspd, y, collidable[i]) {
 			// Check if there is a slope
 			if (!AllCollisionCheck(x + xspd, y - abs(xspd) - 1)) {
-				show_debug_message("la ladera")
 				while (AllCollisionCheck(x + xspd, y)) {
-					show_debug_message("asdasdasd")
 				    y -= subPixel
 				}
 				

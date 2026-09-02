@@ -10,7 +10,9 @@ image_index = 1
 
 with (TheScorcherObject) {
 	if point_distance(obj_player.x, obj_player.y, x, y) <= 300 {
+		if !self.gotcha {
 		self.dead = true
+		}
 	}
 }
 

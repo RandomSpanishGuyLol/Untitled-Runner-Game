@@ -1,5 +1,12 @@
 if (timer_is_running) {
     remaining_time -= 1;
+	if obj_player.burning {
+		remaining_time -= 1;
+	}
+	
+	if remaining_time <= 0 {
+		room_restart()
+	}
 }
 
 var minutes = floor(remaining_time / 3600);

@@ -29,6 +29,8 @@ last_room_exit_y = last_room.exit_y
 
 var chunk_blocks = []
 
+var already_spawned_enemy = false;
+
 // 4. SPAWN LOOP
 for (var r = 0; r < array_length(shape); r++) {
     var line = shape[r];
@@ -38,16 +40,24 @@ for (var r = 0; r < array_length(shape); r++) {
         var yy = last_room_exit_y - 400 - (local_ent_y * 100) + (r * 100)
 
         var obj = -1;
+		var new_inst = noone;
         switch(char) {
 			case "▣": obj = obj_block2; break;
 			case "◪": obj = obj_slope1; break;
 			case "⬕": obj = obj_slope2; break;
 			case "◤": obj = obj_slope3; break;
 			case "◥": obj = obj_slope4; break;
+			case "W": obj = obj_water; break;
 			case "S": obj = obj_saferoomdoor; break;
 			case "X": 
+				if already_spawned_enemy {
+					obj = -1
+					break
+				}
+			
 				randomise()
 				var enemy_i = random(1) * 100
+				show_debug_message("Spawned enemy")
 				show_debug_message(enemy_i)
 				if (enemy_i <= 50) {
 					obj = TheLurkerObj; 
@@ -60,9 +70,11 @@ for (var r = 0; r < array_length(shape); r++) {
 					obj = -1;
 				}
 				
+				already_spawned_enemy = true
+				
 				break;
 			case "⚿": 
-				var new_inst = instance_create_layer(xx, yy, "Instances", obj_door_trigger);
+				new_inst = instance_create_layer(xx, yy, "Instances", obj_door_trigger);
 				new_index = array_length(ROOM_GEN_HISTORY)
 				new_inst.set_room_index = new_index
 				array_push(chunk_blocks, new_inst)
@@ -71,7 +83,7 @@ for (var r = 0; r < array_length(shape); r++) {
 				obj = -1; // Don't spawn anything
 				break;
 			case "E":
-				var new_inst = instance_create_layer(xx, yy, "Instances", obj_exit_marker);
+				new_inst = instance_create_layer(xx, yy, "Instances", obj_exit_marker);
 				new_index = array_length(ROOM_GEN_HISTORY)
 				new_inst.set_room_index = new_index
 				array_push(chunk_blocks, new_inst)
@@ -81,7 +93,7 @@ for (var r = 0; r < array_length(shape); r++) {
         }
 		
 		if (obj != -1) {
-		    var new_inst = instance_create_layer(xx, yy, "Instances", obj);
+		    new_inst = instance_create_layer(xx, yy, "Instances", obj);
 		    array_push(chunk_blocks, new_inst)
 		    }
 		}

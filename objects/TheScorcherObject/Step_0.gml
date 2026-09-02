@@ -12,6 +12,7 @@ if dead {
 	exit
 }
 
+
 if !gotcha {
 moveDir = 0
 
@@ -102,10 +103,18 @@ if (y > 2000) { //2000) {
 
 if point_distance(obj_player.x, obj_player.y, x, y) <= 100 {
 	gotcha = true
+	obj_player.burning = true
+	sprite_index = TheScorcherSpriteFlame
+	
+	audio_play_sound(soundreality_blazing_fire_394355, 2, true)
 }
 }
 else 
 {
 	x = obj_player.x
-	y = obj_player.y
+	y = obj_player.y - 200
+	
+	if !obj_player.burning {
+		dead = true
+	}
 }

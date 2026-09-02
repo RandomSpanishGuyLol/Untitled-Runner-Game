@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"mus_hamster_DumSpiroSpero",
   "parent":{
-    "name":"Music",
-    "path":"folders/Music.yy",
+    "name":"Sound",
+    "path":"folders/Sound.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
