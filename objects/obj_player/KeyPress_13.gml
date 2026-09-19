@@ -16,8 +16,8 @@ with (TheScorcherObject) {
 	}
 }
 
-with (TheLurkerObj) {
-	if point_distance(obj_player.x, obj_player.y, x, y) <= 300 {
-		self.dead = true
-	}
-}
+//with (TheLurkerObj) {
+//	if point_distance(obj_player.x, obj_player.y, x, y) <= 300 {
+//		self.dead = true
+//	}
+//}
