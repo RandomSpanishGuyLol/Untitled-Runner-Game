@@ -3,6 +3,15 @@ var chunk = global.chunks.normal[irandom(array_length(global.chunks.normal)-1)];
 
 if (array_length(ROOM_GEN_HISTORY) % 50 == 0 or array_length(ROOM_GEN_HISTORY) == 5) {
 	chunk = global.chunks.special[0]
+	
+	// massacre all the enemies
+	with (TheLurkerObj) {
+		instance_destroy()
+	}
+	
+	with (TheScorcherObject) {
+		instance_destroy()
+	}
 }
 
 var shape = chunk.shape;
@@ -30,6 +39,7 @@ last_room_exit_y = last_room.exit_y
 var chunk_blocks = []
 
 var already_spawned_enemy = false;
+var entrance_pos = [0, 0];
 
 // 4. SPAWN LOOP
 for (var r = 0; r < array_length(shape); r++) {
@@ -60,10 +70,6 @@ for (var r = 0; r < array_length(shape); r++) {
 				show_debug_message("Spawned enemy")
 				show_debug_message(enemy_i)
 				if (enemy_i <= 50) {
-					obj = TheLurkerObj; 
-				}
-				else if (enemy_i <= 100)
-				{
 					obj = TheScorcherObject;
 				}
 				else {
@@ -80,6 +86,7 @@ for (var r = 0; r < array_length(shape); r++) {
 				array_push(chunk_blocks, new_inst)
 				break;
 			case "⛋":
+				entrance_pos = [xx, yy]
 				obj = -1; // Don't spawn anything
 				break;
 			case "E":
@@ -99,17 +106,33 @@ for (var r = 0; r < array_length(shape); r++) {
 		}
 }
 
+// Spawn lurker
+
+if array_length(ROOM_GEN_HISTORY) > 2 {
+	randomise()
+	var enemy_i = random(1) * 100
+
+	if enemy_i < 50 {
+		previous_room = ROOM_GEN_HISTORY[array_length(ROOM_GEN_HISTORY)-2]
+		var xx = previous_room.entrance_pos[0]
+		var yy = previous_room.entrance_pos[1]
+	
+		instance_create_layer(xx, yy, "Instances", TheLurkerObj);
+		show_debug_message("it is coming.... viene")
+	}
+}
+
 generated_room_width = string_length(shape[0]) * 100
 
-room_data = {id: array_length(ROOM_GEN_HISTORY), name: chunk.name, chunk_blocks: chunk_blocks, end_x: last_room_end_x, width: generated_room_width, exit_y: new_exit_y}
+room_data = {id: array_length(ROOM_GEN_HISTORY), name: chunk.name, chunk_blocks: chunk_blocks, end_x: last_room_end_x, width: generated_room_width, exit_y: new_exit_y, entrance_pos: entrance_pos}
 
 array_push(ROOM_GEN_HISTORY, room_data)
 
-// if (array_length(ROOM_GEN_HISTORY) > 5) {
-	//var earliest_room = ROOM_GEN_HISTORY[0]
-	//for (var b = 0; b < array_length(earliest_room); b++) {
-	//	with (earliest_room[b]) {
-	//		instance_destroy()
-	//	}
-	//}
-//}
+if (array_length(ROOM_GEN_HISTORY) > 5) {
+	var earliest_room = ROOM_GEN_HISTORY[0]
+	for (var b = 0; b < array_length(earliest_room); b++) {
+		with (earliest_room[b]) {
+			instance_destroy()
+		}
+	}
+}

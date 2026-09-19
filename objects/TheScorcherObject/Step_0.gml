@@ -1,5 +1,5 @@
 if dead {
-	if deadTimer == 20 {
+	if deadTimer == 18 {
 		sprite_index = TheScorcherSpriteDeadLol
 		deadTimer -= 1
 	}
@@ -101,12 +101,12 @@ if (y > 2000) { //2000) {
     instance_destroy()
 }
 
-if point_distance(obj_player.x, obj_player.y, x, y) <= 100 {
+if point_distance(obj_player.x, obj_player.y, x, y) <= 100 and !obj_player.burning {
 	gotcha = true
 	obj_player.burning = true
 	sprite_index = TheScorcherSpriteFlame
 	
-	audio_play_sound(soundreality_blazing_fire_394355, 2, true)
+	audio_play_sound(soundreality_blazing_fire_394355, 2, true, 0.5)
 }
 }
 else 

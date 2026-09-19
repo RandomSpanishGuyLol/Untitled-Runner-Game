@@ -6,6 +6,6 @@ jump = -25;
 
 bounceFac = -0.1
 dead = false;
-deadTimer = 20;
+deadTimer = 18;
 
 gotcha = false;

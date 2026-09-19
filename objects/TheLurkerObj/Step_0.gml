@@ -12,15 +12,6 @@ if dead {
 	exit
 }
 
-moveDir = 0
-
-if obj_player.is_in_locker {
-	moveDir = 0
-}
-else if (abs(obj_player.x - x) > 50) {
-	moveDir = sign(obj_player.x - x)
-}
-
 if moveDir > 0 {
 	sprite_index = TheLurkerSprRight
 }
@@ -75,7 +66,6 @@ x += xspd
 
 yspd += grav
 
-var subPixel = .5;
 for (i=0; i<array_length(collidable); i++)
 {
 	if place_meeting(x, y + yspd, collidable[i]) {
@@ -91,7 +81,27 @@ for (i=0; i<array_length(collidable); i++)
 
 y += yspd
 
+
+// Check if gotcha
+
+if (point_distance(obj_player.x, obj_player.y, x, y) < 150 and !obj_player.is_in_locker) {
+	camera = view_camera[0]
+	var cur_x = camera_get_view_x(camera);
+	var cur_y = camera_get_view_y(camera);
+	instance_create_layer(cur_x, cur_y, "VisualEffects", obj_darkscreen)
+	obj_timemanager.remaining_time -= round(0.5 * 60 * 60)
+	
+	audio_play_sound(snd_TheLurkerGotchaSound, 2, false)
+	
+	instance_destroy()
+}
+
+
 // If the player falls off the bottom, jump back to the start (for testing)
-if (y > 2000) { //2000) {
+if (y > 5000) { //
     instance_destroy()
+}
+
+if (obj_player.x - x > 60 * 100) {
+	instance_destroy()
 }
