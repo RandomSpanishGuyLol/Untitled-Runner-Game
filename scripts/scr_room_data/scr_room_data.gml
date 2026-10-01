@@ -1,4 +1,4 @@
-function scr_room_data(){
+function scr_room_data_old(){
     global.chunks = {
 	normal:
 	[

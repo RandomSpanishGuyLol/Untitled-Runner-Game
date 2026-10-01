@@ -38,7 +38,6 @@ last_room_exit_y = last_room.exit_y
 
 var chunk_blocks = []
 
-var already_spawned_enemy = false;
 var entrance_pos = [0, 0];
 
 // 4. SPAWN LOOP
@@ -60,6 +59,16 @@ for (var r = 0; r < array_length(shape); r++) {
 			case "W": obj = obj_water; break;
 			case "S": obj = obj_saferoomdoor; break;
 			case "X": 
+				var already_spawned_enemy = false
+				
+				with (TheScorcherObject) {
+					already_spawned_enemy = true
+				}
+				
+				with (TheLurkerObj) {
+					already_spawned_enemy = true
+				}
+				
 				if already_spawned_enemy {
 					obj = -1
 					break
@@ -75,8 +84,6 @@ for (var r = 0; r < array_length(shape); r++) {
 				else {
 					obj = -1;
 				}
-				
-				already_spawned_enemy = true
 				
 				break;
 			case "⚿": 
