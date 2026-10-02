@@ -1,9 +1,7 @@
-var dist = sqrt( (obj_player.x - x) * (obj_player.x - x) + (obj_player.y - y) * (obj_player.y - y) )
+var dist = point_distance(obj_player.x, obj_player.y, x, y)
 
 if (dist <= 400) {
 	time_to_open -= 1
-	
-	show_debug_message(dist)
 	
 	if (time_to_open == 0) {
 		instance_destroy()

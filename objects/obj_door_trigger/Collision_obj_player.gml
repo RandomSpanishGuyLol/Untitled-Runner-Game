@@ -8,7 +8,7 @@ if (!instance_exists(obj_entrance_marker)) { // Prevent double-triggering
 			event_user(0); 
 		}
 		
-		if (obj_room_manager.ROOM_GEN_HISTORY[set_room_index].name == "SafeRoom") {
+		if (obj_room_manager.ROOM_GEN_HISTORY[set_room_index].name == SafeRoom) {
 			audio_play_sound(mus_hamster_DumSpiroSpero, 1, true, 0.6, 0, 0.8)
 			audio_stop_sound(mus_where_6)
 	
@@ -17,8 +17,10 @@ if (!instance_exists(obj_entrance_marker)) { // Prevent double-triggering
 		}
 	}
 	
-	obj_room_manager.player_room_index = set_room_index
-
-    // instance_destroy(); // Get rid of the old door
+	if obj_room_manager.player_room_index != set_room_index {
+		show_debug_message(set_room_index)
+	
+		obj_room_manager.player_room_index = set_room_index
+	}
 }
 
