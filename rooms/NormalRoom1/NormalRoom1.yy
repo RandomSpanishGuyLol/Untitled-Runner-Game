@@ -57,6 +57,7 @@
     {"name":"inst_7F9AD208","path":"rooms/NormalRoom1/NormalRoom1.yy",},
     {"name":"inst_517B9818","path":"rooms/NormalRoom1/NormalRoom1.yy",},
     {"name":"inst_A698E75","path":"rooms/NormalRoom1/NormalRoom1.yy",},
+    {"name":"inst_7131BD4E","path":"rooms/NormalRoom1/NormalRoom1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -112,6 +113,7 @@
         {"$GMRInstance":"v4","%Name":"inst_7F9AD208","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7F9AD208","objectId":{"name":"obj_groundslope","path":"objects/obj_groundslope/obj_groundslope.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":700.0,"y":200.0,},
         {"$GMRInstance":"v4","%Name":"inst_517B9818","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_517B9818","objectId":{"name":"obj_door_trigger","path":"objects/obj_door_trigger/obj_door_trigger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":100.0,"y":400.0,},
         {"$GMRInstance":"v4","%Name":"inst_A698E75","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A698E75","objectId":{"name":"obj_exit_marker","path":"objects/obj_exit_marker/obj_exit_marker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":1300.0,"y":400.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7131BD4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7131BD4E","objectId":{"name":"obj_enemy_marker","path":"objects/obj_enemy_marker/obj_enemy_marker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.25,"scaleY":19.75,"x":1300.0,"y":400.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
