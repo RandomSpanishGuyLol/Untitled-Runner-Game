@@ -145,6 +145,18 @@
         {
             "name": "inst_599639B2_1",
             "path": "rooms/LockerRoom1/LockerRoom1.yy"
+        },
+        {
+            "name": "inst_377F697D",
+            "path": "rooms/LockerRoom1/LockerRoom1.yy"
+        },
+        {
+            "name": "inst_51661F8B",
+            "path": "rooms/LockerRoom1/LockerRoom1.yy"
+        },
+        {
+            "name": "inst_31FA3D3",
+            "path": "rooms/LockerRoom1/LockerRoom1.yy"
         }
     ],
     "isDnd": false,
@@ -1107,6 +1119,87 @@
                     "scaleY": 1.0,
                     "x": 1200.0,
                     "y": 100.0
+                },
+                {
+                    "$GMRInstance": "v4",
+                    "%Name": "inst_377F697D",
+                    "colour": 4294967295,
+                    "frozen": false,
+                    "hasCreationCode": false,
+                    "ignore": false,
+                    "imageIndex": 0,
+                    "imageSpeed": 1.0,
+                    "inheritCode": false,
+                    "inheritedItemId": null,
+                    "inheritItemSettings": false,
+                    "isDnd": false,
+                    "name": "inst_377F697D",
+                    "objectId": {
+                        "name": "obj_door_trigger",
+                        "path": "objects/obj_door_trigger/obj_door_trigger.yy"
+                    },
+                    "properties": [],
+                    "resourceType": "GMRInstance",
+                    "resourceVersion": "2.0",
+                    "rotation": 0.0,
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "x": 100.0,
+                    "y": 300.0
+                },
+                {
+                    "$GMRInstance": "v4",
+                    "%Name": "inst_51661F8B",
+                    "colour": 4294967295,
+                    "frozen": false,
+                    "hasCreationCode": false,
+                    "ignore": false,
+                    "imageIndex": 0,
+                    "imageSpeed": 1.0,
+                    "inheritCode": false,
+                    "inheritedItemId": null,
+                    "inheritItemSettings": false,
+                    "isDnd": false,
+                    "name": "inst_51661F8B",
+                    "objectId": {
+                        "name": "obj_entrance_marker",
+                        "path": "objects/obj_entrance_marker/obj_entrance_marker.yy"
+                    },
+                    "properties": [],
+                    "resourceType": "GMRInstance",
+                    "resourceVersion": "2.0",
+                    "rotation": 0.0,
+                    "scaleX": 1.0,
+                    "scaleY": 3.0,
+                    "x": 0.0,
+                    "y": 300.0
+                },
+                {
+                    "$GMRInstance": "v4",
+                    "%Name": "inst_31FA3D3",
+                    "colour": 4294967295,
+                    "frozen": false,
+                    "hasCreationCode": false,
+                    "ignore": false,
+                    "imageIndex": 0,
+                    "imageSpeed": 1.0,
+                    "inheritCode": false,
+                    "inheritedItemId": null,
+                    "inheritItemSettings": false,
+                    "isDnd": false,
+                    "name": "inst_31FA3D3",
+                    "objectId": {
+                        "name": "obj_exit_marker",
+                        "path": "objects/obj_exit_marker/obj_exit_marker.yy"
+                    },
+                    "properties": [],
+                    "resourceType": "GMRInstance",
+                    "resourceVersion": "2.0",
+                    "rotation": 0.0,
+                    "scaleX": 1.0,
+                    "scaleY": 3.0,
+                    "x": 1300.0,
+                    "y": 300.0
                 }
             ],
             "layers": [],

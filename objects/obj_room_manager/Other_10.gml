@@ -3,6 +3,17 @@ randomize();
 var random_index = irandom(array_length(global.chunks.normal) - 1)
 var chunk = global.chunks.normal[random_index];
 
+if obj_player.burning and water_room_cooldown == 0 {
+	random_index = irandom(array_length(global.chunks.water) - 1)
+	chunk = global.chunks.water[random_index];
+	water_room_cooldown = 5
+}
+else
+if lurker_spawned && rooms_since_lurker_spawn >= 4 {
+	random_index = irandom(array_length(global.chunks.locker) - 1)
+	chunk = global.chunks.locker[random_index];
+}
+else
 if (array_length(ROOM_GEN_HISTORY) % 50 == 0 or array_length(ROOM_GEN_HISTORY) == 5) {
     chunk = global.chunks.special[0];
 
@@ -47,7 +58,6 @@ var new_exit_y = last_room_exit_y;
 
 // Find maximum X for room width
 var max_x = 0;
-
 
 // SPAWN LOOP
 for (var i = 0; i < array_length(shape); i++) {
@@ -200,9 +210,19 @@ if (array_length(ROOM_GEN_HISTORY) > 2) {
         );
 
         show_debug_message("it is coming.... viene");
+		
+		lurker_spawned = true
+		rooms_since_lurker_spawn = 0
     }
 }
 
+if water_room_cooldown > 0 {
+	water_room_cooldown -= 1
+}
+
+if lurker_spawned {
+	rooms_since_lurker_spawn += 1
+}
 
 // ---------------------------------------------------------
 // SAVE ROOM DATA

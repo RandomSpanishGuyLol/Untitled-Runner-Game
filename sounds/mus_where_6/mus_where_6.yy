@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":197.737,
+  "duration":191.87569,
   "exportDir":"",
   "name":"mus_where_6",
   "parent":{

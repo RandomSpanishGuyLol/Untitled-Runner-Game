@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"dragon_studio_loud_explosion_425457",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.9040136,
+  "exportDir":"",
+  "name":"dragon_studio_loud_explosion_425457",
+  "parent":{
+    "name":"Sound",
+    "path":"folders/Sound.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"dragon_studio_loud_explosion_425457.mp3",
+  "volume":1.0,
+}

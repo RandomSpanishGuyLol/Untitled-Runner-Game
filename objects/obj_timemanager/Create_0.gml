@@ -1,5 +1,6 @@
 timer_is_running = false
 remaining_time = 3 * 60 * 60
+game_over_timer = -1
 
 ui_pos_x = 500
 ui_pos_x_offset = -42

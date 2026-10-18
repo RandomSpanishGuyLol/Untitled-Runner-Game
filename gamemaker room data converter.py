@@ -46,9 +46,10 @@ for f in os.listdir(rooms_root):
 
     raw_room_data[f] = data
 
-output = "function scr_room_data() {\nglobal.chunks =  {\n normal: [\n"
+output = "function scr_room_data() {\nglobal.chunks =  {"
 
 def add_rooms(out, room_keyword, room_type, is_last=False):
+    out += f"\n {room_type}: [\n"
     rooms = {room_name: raw_room_data[room_name] for room_name in raw_room_data.keys() if room_name.startswith(room_keyword)}
 
     for room_name, room_data in rooms.items():
@@ -75,16 +76,21 @@ def add_rooms(out, room_keyword, room_type, is_last=False):
             out += "   }\n\n"
         else:
             out += "   },\n\n"
+    out += "\n]"
+    if not is_last: 
+        out += ","
+    return out
 
 normal_rooms = {room_name: raw_room_data[room_name] for room_name in raw_room_data.keys() if room_name.startswith("NormalRoom")}
 special_rooms = {room_name: raw_room_data[room_name] for room_name in raw_room_data.keys() if room_name.startswith("SafeRoom")}
     
-add_rooms(output, "NormalRoom", "normal")
-add_rooms(output, "WaterRoom", "water")
-add_rooms(output, "LockerRoom", "locker")
-add_rooms(output, "SafeRoom", "special", is_last=True)
+output = add_rooms(output, "NormalRoom", "normal")
+output = add_rooms(output, "WaterRoom", "water")
+output = add_rooms(output, "LockerRoom", "locker")
+output = add_rooms(output, "SafeRoom", "special", is_last=True)
 
-output += "\n]\n}\n}"
+
+output += "\n}\n}"
 
 script_name = "scr_room_data"
 out_path = f"scripts/{script_name}/{script_name}.gml"

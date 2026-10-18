@@ -245,10 +245,6 @@
         {
             "name": "inst_1A2E41C4",
             "path": "rooms/MainGameRoom/MainGameRoom.yy"
-        },
-        {
-            "name": "inst_7FFE9CD4",
-            "path": "rooms/MainGameRoom/MainGameRoom.yy"
         }
     ],
     "isDnd": false,
@@ -1942,33 +1938,6 @@
                     "scaleY": 1.0,
                     "x": 0.0,
                     "y": 1600.0
-                },
-                {
-                    "$GMRInstance": "v4",
-                    "%Name": "inst_7FFE9CD4",
-                    "colour": 4294967295,
-                    "frozen": false,
-                    "hasCreationCode": false,
-                    "ignore": false,
-                    "imageIndex": 0,
-                    "imageSpeed": 1.0,
-                    "inheritCode": false,
-                    "inheritedItemId": null,
-                    "inheritItemSettings": false,
-                    "isDnd": false,
-                    "name": "inst_7FFE9CD4",
-                    "objectId": {
-                        "name": "obj_groundblock",
-                        "path": "objects/obj_groundblock/obj_groundblock.yy"
-                    },
-                    "properties": [],
-                    "resourceType": "GMRInstance",
-                    "resourceVersion": "2.0",
-                    "rotation": 0.0,
-                    "scaleX": 1.0,
-                    "scaleY": 1.0,
-                    "x": 600.0,
-                    "y": 200.0
                 }
             ],
             "layers": [],

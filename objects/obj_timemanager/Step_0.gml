@@ -5,6 +5,18 @@ if (timer_is_running) {
 	}
 	
 	if remaining_time <= 0 {
+		timer_is_running = false
+		var explosion = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_gameoverexplosion)
+		game_over_timer = 16
+		
+		audio_play_sound(dragon_studio_loud_explosion_425457, 2, false, 0.5)
+	}
+}
+
+if game_over_timer > 0 {
+	game_over_timer -= 1
+	
+	if game_over_timer == 0 {
 		room_restart()
 	}
 }
