@@ -81,7 +81,7 @@ if jumpKeyPressed && AllCollisionCheck(x, y+16) && !is_in_locker {
 }
 
 if (!is_in_locker) {
-	var subPixel = .5;
+	
 	for (i=0; i<array_length(collidable); i++)
 	{
 		if place_meeting(x, y + yspd, collidable[i]) {
