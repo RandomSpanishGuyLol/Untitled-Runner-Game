@@ -1,2 +1,2 @@
 layer_set_visible("MenuLayer", false)
-room_goto(CreditsScreenYes)
+room_goto(room_CreditsScreenYes)

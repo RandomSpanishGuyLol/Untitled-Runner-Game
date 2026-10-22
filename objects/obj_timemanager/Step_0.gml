@@ -3,22 +3,28 @@ if (timer_is_running) {
 	if obj_player.burning {
 		remaining_time -= 1;
 	}
+}
+
+if game_over_timer != -1 {
+	var explosion = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_gameoverexplosion)
+	explosion.depth = 2
 	
-	if remaining_time <= 0 {
-		timer_is_running = false
-		var explosion = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_gameoverexplosion)
-		game_over_timer = 16
-		
-		audio_play_sound(dragon_studio_loud_explosion_425457, 2, false, 0.5)
-	}
+	audio_play_sound(dragon_studio_loud_explosion_425457, 2, false, 0.1)
+}
+
+if remaining_time <= 0 and timer_is_running {
+	timer_is_running = false
+	game_over_timer = 32
+	audio_play_sound(dragon_studio_loud_explosion_425457, 2, false, 0.2)
 }
 
 if game_over_timer > 0 {
 	game_over_timer -= 1
-	
-	if game_over_timer == 0 {
-		room_restart()
-	}
+}
+
+if game_over_timer == 0 {
+	audio_stop_all()
+	room_goto(room_GameOver)
 }
 
 var minutes = floor(remaining_time / 3600);

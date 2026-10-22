@@ -1,6 +1,6 @@
 {
   "$GMRoom":"v1",
-  "%Name":"GameRedirect",
+  "%Name":"room_GameRedirect",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
@@ -9,7 +9,7 @@
     {"name":"inst_6E449B2B","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_5D098D33","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_64175A0","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_3D0DB120","path":"rooms/GameRedirect/GameRedirect.yy",},
+    {"name":"inst_3D0DB120","path":"rooms/room_GameRedirect/room_GameRedirect.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -23,7 +23,7 @@
     {"$GMRInstanceLayer":"","%Name":"Lockers","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Lockers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"GameRedirect",
+  "name":"room_GameRedirect",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

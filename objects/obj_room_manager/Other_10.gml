@@ -1,21 +1,21 @@
 randomize();
 
-var random_index = irandom(array_length(global.chunks.normal) - 1)
-var chunk = global.chunks.normal[random_index];
+var random_index = irandom(array_length(chunks.normal) - 1)
+var chunk = chunks.normal[random_index];
 
 if obj_player.burning and water_room_cooldown == 0 {
-	random_index = irandom(array_length(global.chunks.water) - 1)
-	chunk = global.chunks.water[random_index];
+	random_index = irandom(array_length(chunks.water) - 1)
+	chunk = chunks.water[random_index];
 	water_room_cooldown = 5
 }
 else
 if lurker_spawned && rooms_since_lurker_spawn >= 4 {
-	random_index = irandom(array_length(global.chunks.locker) - 1)
-	chunk = global.chunks.locker[random_index];
+	random_index = irandom(array_length(chunks.locker) - 1)
+	chunk = chunks.locker[random_index];
 }
 else
 if (array_length(ROOM_GEN_HISTORY) % 50 == 0 or array_length(ROOM_GEN_HISTORY) == 5) {
-    chunk = global.chunks.special[0];
+    chunk = chunks.special[0];
 
     // Massacre all the enemies
     with (TheLurkerObj) {
@@ -93,7 +93,7 @@ for (var i = 0; i < array_length(shape); i++) {
             obj_exit_marker
         );
 
-        new_index = array_length(ROOM_GEN_HISTORY) + 1;
+        new_index = array_length(ROOM_GEN_HISTORY);
         new_inst.set_room_index = new_index;
 
         array_push(chunk_blocks, new_inst);
@@ -245,12 +245,12 @@ array_push(ROOM_GEN_HISTORY, room_data);
 // DELETE OLD ROOMS
 // ---------------------------------------------------------
 
-if (array_length(ROOM_GEN_HISTORY) > 5) {
-    var earliest_room = ROOM_GEN_HISTORY[0];
+//if (array_length(ROOM_GEN_HISTORY) > 5) {
+//    var earliest_room = ROOM_GEN_HISTORY[0];
 
-    for (var b = 0; b < array_length(earliest_room.chunk_blocks); b++) {
-        with (earliest_room.chunk_blocks[b]) {
-            instance_destroy();
-        }
-    }
-}
+//    for (var b = 0; b < array_length(earliest_room.chunk_blocks); b++) {
+//        with (earliest_room.chunk_blocks[b]) {
+//            instance_destroy();
+//        }
+//    }
+//}

@@ -18,20 +18,20 @@ shiftPressed = 1 + keyboard_check(vk_shift) * 1.5;
 moveDir = rightKey - leftKey
 
 if high_priority_anim_timer == 0 {
-if moveDir == 1 {
-sprite_index = PlayerRightTest
-last_direction = 1
-}
-else if moveDir == -1 {
-	sprite_index = PlayerLeftTest
-	last_direction = -1
-}
-else {
-	sprite_index = PlayerSpriteTest
-}
-}
-else {
-	high_priority_anim_timer -= 1
+	if moveDir == 1 {
+	sprite_index = PlayerRightTest
+	last_direction = 1
+	}
+	else if moveDir == -1 {
+		sprite_index = PlayerLeftTest
+		last_direction = -1
+	}
+	else {
+		sprite_index = PlayerSpriteTest
+	}
+	}
+	else {
+		high_priority_anim_timer -= 1
 }
 
 smoothCof = 0.9
@@ -47,15 +47,12 @@ var subPixel = .5;
 var collidable = [obj_block2, obj_slope1, obj_slope2, obj_slope3, obj_slope4, obj_saferoomdoor]
 
 if (!is_in_locker) {
-	for (i=0; i<array_length(collidable); i++) {
-		if place_meeting(x + xspd, y, collidable[i]) {
+		if AllCollisionCheck(x + xspd, y) {
 			// Check if there is a slope
 			if (!AllCollisionCheck(x + xspd, y - abs(xspd) - 1)) {
 				while (AllCollisionCheck(x + xspd, y)) {
 				    y -= subPixel
 				}
-				
-				break
 			}
 			// If there's no slope, regular collision
 			else 
@@ -66,10 +63,8 @@ if (!is_in_locker) {
 				}
 		
 				xspd = 0
-				break
 			}
 		}
-	}
 	
 	x += xspd
 }
@@ -82,17 +77,13 @@ if jumpKeyPressed && AllCollisionCheck(x, y+16) && !is_in_locker {
 
 if (!is_in_locker) {
 	
-	for (i=0; i<array_length(collidable); i++)
-	{
-		if place_meeting(x, y + yspd, collidable[i]) {
+	if AllCollisionCheck(x, y + yspd) {
 			var pixelCheck = subPixel * sign(yspd)
 			while (!AllCollisionCheck(x, y+pixelCheck)) {
 				y += pixelCheck
 			}
 		
 			yspd = yspd * bounceFac
-			break
-		}
 	}
 	
 	y += yspd

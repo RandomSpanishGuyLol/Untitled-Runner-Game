@@ -1,2 +1,2 @@
 layer_set_visible("MenuLayer", false)
-room_goto(MainGameRoom_1)
+room_goto(room_MainGameRoom)

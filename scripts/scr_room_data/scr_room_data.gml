@@ -1,5 +1,5 @@
 function scr_room_data() {
-global.chunks =  {
+obj_room_manager.chunks =  {
  normal: [
   {
     name: NormalRoom1,
